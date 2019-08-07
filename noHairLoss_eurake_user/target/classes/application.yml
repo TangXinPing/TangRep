@@ -1,0 +1,10 @@
+###服务启动端口号
+server:
+    port: 9913
+spring:
+  application:
+    name: noHairLoss-eurake-user
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
