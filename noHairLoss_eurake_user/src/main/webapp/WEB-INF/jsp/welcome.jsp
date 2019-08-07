@@ -11,6 +11,6 @@
     <title>Nice to meet you</title>
 </head>
 <body>
-    <img src="/statics/images/welcome.jsp">
+    <img src="/images/testwebstatic.jpg">
 </body>
 </html>

@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: noHairLoss-eurake-user
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/jsp/
+
 eureka:
   client:
     serviceUrl:
