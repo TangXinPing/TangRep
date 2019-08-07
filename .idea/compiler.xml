@@ -14,5 +14,8 @@
         <module name="noHairLoss_eurake_service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="noHairLoss-start-hystrix" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
