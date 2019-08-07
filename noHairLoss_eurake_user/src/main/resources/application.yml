@@ -8,7 +8,9 @@ spring:
     view:
       suffix: .jsp
       prefix: /WEB-INF/jsp/
-
+  devtools:
+    restart:
+      enabled: true
 eureka:
   client:
     serviceUrl:
