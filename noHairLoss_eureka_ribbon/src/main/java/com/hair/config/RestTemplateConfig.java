@@ -13,6 +13,8 @@ public class RestTemplateConfig {
     @Bean
     @LoadBalanced//以restTemplate调用的时候，开启ribbon的本地的负载均衡调用
     RestTemplate restTemplate() {
+        RestTemplate re = new RestTemplate();
+        re.getMessageConverters();
         return new RestTemplate();
     }
 }

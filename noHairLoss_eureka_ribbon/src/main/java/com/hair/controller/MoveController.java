@@ -5,6 +5,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -18,6 +19,11 @@ public class MoveController {
     @GetMapping("/user")
     public Object findUserById(){
         return restTemplate.getForObject("http://noHairLoss-eurake-user/user/detail", Object.class);
+    }
+
+    @RequestMapping("/testTemplate")
+    public Object testRestTemplate(){
+        return null;
     }
 
 

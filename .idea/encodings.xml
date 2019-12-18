@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/noHairLoss_Feign_Client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/noHairLoss_common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/noHairLoss_eurake_service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/noHairLoss_eurake_thread" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/noHairLoss_eurake_user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/noHairLoss_eureka_ribbon" charset="UTF-8" />
   </component>

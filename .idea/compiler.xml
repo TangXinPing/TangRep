@@ -12,10 +12,13 @@
         <module name="noHairLoss_Feign_Client" />
         <module name="noHairLoss_eureka_ribbon" />
         <module name="noHairLoss_eurake_service" />
+        <module name="noHairLoss_eurake_thread" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="noHairLoss-start-hystrix" target="1.7" />
+      <module name="noHairLoss_eurake_service" target="1.7" />
+      <module name="noHairLoss_eurake_user" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
