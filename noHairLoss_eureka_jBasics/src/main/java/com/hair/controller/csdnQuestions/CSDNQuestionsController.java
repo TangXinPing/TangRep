@@ -1,9 +1,10 @@
-package com.hair.controller;
+package com.hair.controller.csdnQuestions;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.hair.utils.ComDate;
 import com.hair.utils.DateUtil;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,18 +12,21 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Api("记录csdn上的一些问题")
 @RestController
 @RequestMapping("/csdn")
 public class CSDNQuestionsController {
 
+    //计算给定时间距今年份
     @RequestMapping("/computeYear")
     public int computeYear(){
         ComDate comDate = new ComDate();
         Date date = DateUtil.parseStrToDate("2012-02-12",DateUtil.DATE_FORMAT_YY_MM_DD);
-
         comDate.setCreateDate(date);
         return comDate.getYear();
     }
+
+    //解析不规则字段
     @RequestMapping("/circulateJson")
     public void circulateJson(){
         //1、定义json数据

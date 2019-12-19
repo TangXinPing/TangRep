@@ -1,4 +1,4 @@
-package com.hair.controller;
+package com.hair.singleThreadPool;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

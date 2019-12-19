@@ -1,0 +1,22 @@
+###服务启动端口号
+server:
+    port: 9915
+spring:
+  application:
+    name: noHairLoss-eurake-jBasics
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/jsp/
+  devtools:
+    restart:
+      enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+    status-page-url:
+      http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html

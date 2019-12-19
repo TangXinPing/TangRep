@@ -14,19 +14,11 @@ public class ComDate {
     public int getYear(){
         //设置以前的日期
         Calendar before = Calendar.getInstance();
-        /*
-        Calendar也许不可以这样子setTime
-         */
         before.setTime(createDate);
-
-
         Calendar now = Calendar.getInstance();
-
         //年份查=现在的年份-以前的年份
-        years = now.get(Calendar.YEAR) - now.get(Calendar.YEAR);
-
+        years = now.get(Calendar.YEAR) - before.get(Calendar.YEAR);
         return years;
-
     }
 
     public int getYears() {

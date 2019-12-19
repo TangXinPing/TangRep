@@ -17,7 +17,7 @@ public class SwaggerConfig {
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.any())//过滤的接口
+                .apis(RequestHandlerSelectors.basePackage("com.hair.controller"))//指定接口所在的基包
                 .paths(PathSelectors.any())
                 .build();
         return docket;
