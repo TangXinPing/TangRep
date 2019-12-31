@@ -12,8 +12,6 @@ public class SingletonPattern {
     @RequestMapping("/singletonPattern")
     public void singletonPattern(){
         /**
-         * java中的四种线程池
-         *https://www.cnblogs.com/baizhanshi/p/5469948.html捡到宝了
          * 创建一个可缓存的线程池，如果线程池的大小超过了处理任务所需要的线程，就会回收部分的线程（60秒不执行任务的）
          * 任务数量增加，线程池大小不够，会添加新的线程
          * 不会对线程大小做限制，线程池的大小依赖于JVM能够创建的最大线程的大小
@@ -29,9 +27,13 @@ public class SingletonPattern {
         }
         /**
          * shutdown调用后不可以再开始新的任务，已经submit进去的任务会执行
-         * 还有一个方法是shutdownNow方法，这个会返回现在还没开
+         * 还有一个方法是shutdownNow方法，这个会结束所有任务
          */
         executorService.shutdown();
+        /**
+         * isTerminated判断这这个executor已经结束了。
+         * 因为调用shutdown之后，要等待已加入任务队列的任务执行结束
+         */
         while (!executorService.isTerminated()){
             System.out.println("temp = "+Singletion2.getInstance().temp);
         }
@@ -59,8 +61,8 @@ class Singletion2{
 
     public Singletion2(int temp) {
         this.temp = temp;
-
     }
+
 
     public static synchronized Singletion2 getInstance(){
         if(singletion2==null){
